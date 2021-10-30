@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Add Birds to OBS</title>
+
+    <meta name="description" content="WEB222 Wildlife Assignment" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon from https://www.favicon.cc/?action=icon&file_id=716323 -->
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZMDGCmTAzQpkwMZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkwMJqZMDGKmTAzspkwM/6ZMDPmmTAwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmTAxMpkwMz6ZMDPimTAz6pkwM/6ZMDP+mTAz/pkwMHKZMDBymTAwUAAAAAAAAAAAAAAAAAAAAAAAAAACmTAyQpkwM/aZMDP+mTAz/pkwM/6ZMDP+mTAz/pkwM/KZMDDSmTAzlpkwM/6ZMDL2mTAwLAAAAAAAAAAAAAAAApkwMiKZMDP+mTAz/pkwM/6ZMDP+mTAz/pkwM/6ZMDNumTAwhpkwM/qZMDP+mTAz/pkwMigAAAAAAAAAAAAAAAKZMDASmTAyOpkwM/6ZMDP+mTAz/pkwM/6ZMDP+mTAyLpkwMAaZMDKSmTAz/pkwM/6ZMDLYAAAAAAAAAAAAAAAAAAAAAAAAAAKZMDDSmTAyvpkwM4aZMDOymTAzdpkwMQKZMDAOmTAwJpkwMPqZMDHqmTAwgAAAAAAAAAAAAAAAAAAAAAKZMDEemTAzJpkwMUKZMDBWmTAwjpkwMFgAAAACmTAxjpkwM0KZMDJCmTAwHAAAAAAAAAAAAAAAAAAAAAAAAAACmTAympkwM/6ZMDPOmTAwKpkwMI6ZMDDYAAAAApkwMw6ZMDP+mTAz/pkwMuaZMDAIAAAAAAAAAAAAAAAAAAAAApkwM1KZMDP+mTAz/pkwMHaZMDJemTAz2pkwMiqZMDFymTAz/pkwM/6ZMDP+mTAxQAAAAAAAAAAAAAAAAAAAAAKZMDKmmTAz/pkwM3KZMDBOmTAzFpkwM/6ZMDP2mTAwnpkwMn6ZMDP6mTAz/pkwMbwAAAAAAAAAAAAAAAAAAAACmTAwepkwMyqZMDH6mTAwCpkwMtaZMDP+mTAz/pkwMgwAAAACmTAwmpkwMUqZMDAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZMDE2mTAz/pkwM/6ZMDG8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmTAwBpkwMeKZMDLGmTAwFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP9/AAD+PwAA8D8AAMAjAADAIQAA4CEAAPh/AAD35wAA48MAAOIjAADiIwAA9h8AAP8/AAD/vwAA//8AAA=="
+      rel="icon"
+      type="image/x-icon"
+    />
+
+    <!-- Normalize CSS across browsers -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
+    />
+
+    <!-- Water CSS theme, see https://watercss.kognise.dev/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+    <!-- Our site's styles -->
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="form.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+*{
+  box-sizing: border-box;
+}
+
+/*carousels and navbar*/
+.navbar-inverse{
+  background-color: #ADD8E7;
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-brand{
+  color:aliceblue;
+  font-size: 40px;
+  padding: 40px 15px;
+  font-weight: 940;
+}
+
+.nav .navbar-nav .navbar-right{
+  margin: 25px 0;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+  color:#fff;
+  text-transform: uppercase;
+}
+
+body{
+  padding:1em;
+  font-family: 'Poppins', sans-serif;
+}
+
+header .carousel-inner .item{
+  height:100vh;
+}
+
+.banner{
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.carousel-caption{
+  padding-bottom: 245px;
+  font-family: 'Poppins';
+}
+
+.carousel-caption h2{
+  font-size: 70px;
+  text-transform:uppercase;
+  font-weight: bold;
+}
+
+.carousel-caption h2 span{
+  color: orange;
+}
+
+
+.carousel-caption a{
+  background: #EDBB00;
+	padding: 15px 35px;
+	display: inline-block;
+	margin-top: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 25px;
+}
+
+.carousel-indicators .active{
+  background-color: #EDBB00;
+  border-color: #EDBB00;
+}
+
+.carousel-control.right{
+  background-image: none;
+}
+
+.carousel-control.left{
+  background-image: none;
+}
+
+div.content{
+  align-content: center;
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 4%; 
+  width: 80%;
+}
+
+h4.innercontent{
+  font-weight: normal; 
+  line-height: 0.8cm; 
+  color:#686C6D; 
+  padding-top: 1%;
+}
+
+table.responsiveTable{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.responsiveTable thead th{
+  border: 2px solid #E6E6E6;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  padding-top: 2.3%;
+  padding-bottom: 2.3%;
+  font-size: large;
+}
+
+table.responsiveTable tbody td{
+  border: 2px solid #E6E6E6;
+  padding: 1.5%;
+  font-size: large;
+}
+
+img{
+  width: 250px;
+  height: auto;   
+}
+
+div.instruction{
+  text-align: center;
+  font-weight: bolder;
+  padding: 1%;
+  font-size: 23px;
+}
+
+div.button{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 23px;
+  padding: 1%;
+  margin: auto;
+}
+
+div.button button{
+  padding: 1.5% 8%;
+  border-radius: 10px;
+  background-color: #83F384;
+  border-width: 0px;
+}
+
+div.protect{
+  width: 65%;
+  margin: auto;
+  text-align: center;
+  font-size: 17px;
+}
+
+div.follow{
+  font-size: 19px;
+  margin: auto;
+  text-align: center;
+}
+
+a.link{
+  color: black;
+}
+
+div.icons{
+    font-size: 19px;
+    margin: auto;
+    text-align: center;
+}
+
+div.input{
+  font-weight: bolder;
+}
+
+span.star{
+  color: red;
+}
+
+span.error{
+    color: #ed7e00;
+    font-weight: normal;
+}
+/* responsive css*/
+@media only screen and (min-width: 768px)and (max-width: 990px){
+  .carousel-caption {
+		padding-bottom: 350px;
+	}
+	.carousel-caption h2 {
+		font-size: 50px;
+	}
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+	.navbar-inverse .navbar-brand {
+		font-size: 30px;
+		padding: 20px 15px;
+	}
+	.navbar-collapse {
+		background: rgba(0, 0, 0, 0.5);
+	}
+}
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="index"><i class="fas fa-home"></i> Home</a>
+        <a href="add"><i class="fas fa-plus"></i> Add Birds</a>
+      </nav>
+
+      <h1>OBS Toronto</h1>
+    
+      <h2>Adding New Birds to OBS</h2>
+      <p>The data used on this website is generated by volunteers like you who love nature and want to share it. You can improve the database of 
+        wildlife information simply by adding a new Bird here!
+      </p>
+      <br>
+    </header>
+<!--   -->
+    <main>
+      <h2>Bird Details</h2><br>
+      <span class="star">*</span> Required field <br><br>
+      
+      <form id="myForm" action="https://formspree.io/f/xwkawpvo" target="_blank" method="POST">
+      <div class="input">
+        
+        <label for="name">Species Name<span class="star">*</span></label>
+        <input type="text" placeholder="Species Name" size="83" id="name" name="name">
+        <span class="error" id="errorName"></span>
+        <br>
+
+        <label for="description">Description<span class="star">*</span></label>
+        <textarea name="description" rows="7" cols="85" placeholder="Description of the bird sighted" id="description" ></textarea>
+        <span class="error" id="errorDescription"></span>
+        <br>
+
+        <label for="date">Date Found<span class="star">*</span></label>
+        <input type="date" placeholder="dd/mm/yyyy" style="width: 93%;" max="2021-08-15" id="date" name="date">
+        <span class="error" id="errorDate"></span>
+        <br>
+
+        <label for="notes">Important Notes</label>
+        <textarea name="notes" rows="7" cols="85" placeholder="Any important notes about the sighting" id="notes"></textarea>
+        <br>
+
+        <label for="img">Image<span class="star">*</span></label>  
+        <input type="text" placeholder="https://website.com/image.png" size="83" id="img" name="img">
+        <span class="error" id="errorImg"></span>
+        <br>
+
+        <label for="url">Wikipedia URL<span class="star">*</span></label>
+        <input type="text" placeholder="https://en.wikipedia.org/wiki/Bird" size="83" id="url" name="url">
+        <span class="error" id="errorUrl"></span>
+        <br>
+
+        <button type="submit" id="btn" style="width: 93%;">Submit</button>
+      </div>
+    </form>
+         
+      
+
+    </main>
+    <!-- Your custom form validation code goes in the file js/validate.js -->
+    <script src="validate.js"></script>
+  </body>
+</html>

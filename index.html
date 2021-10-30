@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Enter your First_Name and Last_Name, Student Id and Course Name here -->
+    <!-- Jay Patel -->
+    <!-- 158741199 -->
+    <!-- Web222 -->
+    <meta charset="UTF-8">
+    <title>Ontario Bird Sanctuary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+*{
+  box-sizing: border-box;
+}
+
+/*carousels and navbar*/
+.navbar-inverse{
+  background-color: #ADD8E7;
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-brand{
+  color:aliceblue;
+  font-size: 40px;
+  padding: 40px 15px;
+  font-weight: 940;
+}
+
+.nav .navbar-nav .navbar-right{
+  margin: 25px 0;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+  color:#fff;
+  text-transform: uppercase;
+}
+
+body{
+  padding:1em;
+  font-family: 'Poppins', sans-serif;
+}
+
+header .carousel-inner .item{
+  height:100vh;
+}
+
+.banner{
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.carousel-caption{
+  padding-bottom: 245px;
+  font-family: 'Poppins';
+}
+
+.carousel-caption h2{
+  font-size: 70px;
+  text-transform:uppercase;
+  font-weight: bold;
+}
+
+.carousel-caption h2 span{
+  color: orange;
+}
+
+
+.carousel-caption a{
+  background: #EDBB00;
+	padding: 15px 35px;
+	display: inline-block;
+	margin-top: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 25px;
+}
+
+.carousel-indicators .active{
+  background-color: #EDBB00;
+  border-color: #EDBB00;
+}
+
+.carousel-control.right{
+  background-image: none;
+}
+
+.carousel-control.left{
+  background-image: none;
+}
+
+div.content{
+  align-content: center;
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 4%; 
+  width: 80%;
+}
+
+h4.innercontent{
+  font-weight: normal; 
+  line-height: 0.8cm; 
+  color:#686C6D; 
+  padding-top: 1%;
+}
+
+table.responsiveTable{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.responsiveTable thead th{
+  border: 2px solid #E6E6E6;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  padding-top: 2.3%;
+  padding-bottom: 2.3%;
+  font-size: large;
+}
+
+table.responsiveTable tbody td{
+  border: 2px solid #E6E6E6;
+  padding: 1.5%;
+  font-size: large;
+}
+
+img{
+  width: 250px;
+  height: auto;   
+}
+
+div.instruction{
+  text-align: center;
+  font-weight: bolder;
+  padding: 1%;
+  font-size: 23px;
+}
+
+div.button{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 23px;
+  padding: 1%;
+  margin: auto;
+}
+
+div.button button{
+  padding: 1.5% 8%;
+  border-radius: 10px;
+  background-color: #83F384;
+  border-width: 0px;
+}
+
+div.protect{
+  width: 65%;
+  margin: auto;
+  text-align: center;
+  font-size: 17px;
+}
+
+div.follow{
+  font-size: 19px;
+  margin: auto;
+  text-align: center;
+}
+
+a.link{
+  color: black;
+}
+
+div.icons{
+    font-size: 19px;
+    margin: auto;
+    text-align: center;
+}
+
+div.input{
+  font-weight: bolder;
+}
+
+span.star{
+  color: red;
+}
+
+span.error{
+    color: #ed7e00;
+    font-weight: normal;
+}
+/* responsive css*/
+@media only screen and (min-width: 768px)and (max-width: 990px){
+  .carousel-caption {
+		padding-bottom: 350px;
+	}
+	.carousel-caption h2 {
+		font-size: 50px;
+	}
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+	.navbar-inverse .navbar-brand {
+		font-size: 30px;
+		padding: 20px 15px;
+	}
+	.navbar-collapse {
+		background: rgba(0, 0, 0, 0.5);
+	}
+}
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">OBS Toronto</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="about">About Us</a></li>
+              <li><a href="add">Register Animal</a></li>
+              <li><a href="fetch">Select Bird</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Replace the text and images if you want -->
+      <div  id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+
+        <div class="carousel-inner" role="listbox">
+          <div class="active item">
+            <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1480044965905-02098d419e96?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);"></div>
+            <div class="carousel-caption">
+              <h2 class="animated bounceInRight" style="animation-delay: 1s">We preserve <span> Birds</span> here</h2>
+              <h3 class="animated bounceInLeft" style="animation-delay: 2s">Ontario Bird Sanctuary</h3>
+              <p class="animated bounceInRight" style="animation-delay: 3s"><a href="about">Contact Us</a></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1444464666168-49d633b86797?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80);"></div>
+            <div class="carousel-caption">
+              <h2 class="animated bounceInRight" style="animation-delay: 1s">We take special care of <span> Endangered Birds</span> here</h2>
+              <h3 class="animated bounceInLeft" style="animation-delay: 2s">Ontario Bird Sanctuary</h3>
+              <p class="animated bounceInRight" style="animation-delay: 3s"><a href="about">Contact Us</a></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1553736277-055142d018f0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=953&q=80);"></div>
+            <div class="carousel-caption">
+              <h2 class="animated bounceInRight" style="animation-delay: 1s">Unique and Special<span> Pet Birds</span></h2>
+              <h3 class="animated bounceInLeft" style="animation-delay: 2s">Ontario Bird Sanctuary</h3>
+              <p class="animated bounceInRight" style="animation-delay: 3s"><a href="about">Contact Us</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <main>
+        <!-- Place the HTML Content here. Use different HTML elements which we discussed in all the previous classes. 
+        You must include one Responsive Table here. -->
+      
+     <div class="content">
+      <h2>
+         Our Mission
+       </h2> 
+        <h4 class="innercontent">
+          <p>
+            Deforestation, climate change and water pollution are having a profound impact on our wildlife, and here at the Ontario Bird
+            Sanctuary, we seek to protect endangered species of birds from extinction. With your help, we can also create a database of birds in
+            the wild for future generations to see.
+           </p>
+           <p>
+            Birds play an important role in the very delicate ecosystem of wildlife. Undoubtedly, thier most important role is to pollinate flowers
+            and disper, se seeds. This provides food to other animals and wildlife, and without their help, many species of plants will go extinct
+            which can significantly impact a local ecosystem. They are also a natural pest control, eating various agricultural pests.
+          </p>
+      </h4>
+      <br><br>
+      <h2>
+        Some User Observations
+      </h2>
+      <br>
+      <div style="overflow-x:auto;">
+      <Table class="responsiveTable" id="responsiveTable">
+        <thead>
+          <tr>
+            <th style="width: 290px;">Image</th>
+            <th style="width: 155px;">Species</th>
+            <th style="width: 608px;">Description</th>
+            <th>Date Found</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Wood_Duck_%28Aix_sponsa%29%2C_Parc_du_Rouge-Clo%C3%AEtre%2C_Brussels.jpg"alt="woodduck"></td>
+            <td><a href="https://en.wikipedia.org/wiki/Wood_duck">Wood Duck</a></td>
+            <td>There is a distinctive multicoloured iridescent plumage and red eyes, with a distinctive white flare down the neck.</td>
+            <td>April 17, 2021</td>
+          </tr>
+          <tr>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Cardinal.jpg"alt="northerncardinal"></td>
+            <td><a href="https://en.wikipedia.org/wiki/Northern_cardinal">Northern Cardinal</a></td>
+            <td>It has a distinctive crest on the head and a mask on the face which is black. The bird is also vibrant red</td>
+            <td>April 15, 2021</td>
+          </tr>
+          <tr>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Passer_domesticus_male_%2815%29.jpg" alt="housesparrow"></td>
+            <td><a href="https://en.wikipedia.org/wiki/House_sparrow">House Sparrow</a></td>
+            <td>The bird had a mottled brown back, grey belly and crown, black "bib," white cheeks, and chestnut head patches.</td>
+            <td>March 29, 2021</td>
+          </tr>
+        </tbody>
+      </Table>
+      </div>
+      <br>
+      <div class="instruction">
+      <p>Help us expand our database and report a sighting of a bird!</p>
+      </div>
+      <div class="button">
+       <a href="add" class="link"><button>Add a bird</button></a>
+      </div>
+      <br><br><br>
+      <div class="protect">
+        <p>There are various ways to help! Come volunteer, donate, get involved in events or spread the hastag <b>#ProtectOurBirds</b> on social media!</p>
+      </div>
+      <br>
+     
+      <div class="follow">
+        <p>Follow us on social media!</p>
+      </div>
+    </div>
+    </main>
+    
+    <footer>
+      <!-- Add Social Media Icons here and link them with random websites of your choice -->
+      <div class="icons">
+        <a href="https://icons.getbootstrap.com/icons/facebook/" class="link"><i class="bi-facebook" style="font-size: 30px;"></i></a>
+        &nbsp;&nbsp;
+        <a href="https://icons.getbootstrap.com/icons/instagram/" class="link"><i class="bi-instagram" style="font-size: 30px;"></i></a>
+        &nbsp;&nbsp;
+        <a href="https://icons.getbootstrap.com/icons/twitter/" class="link"><i class="bi-twitter" style="font-size: 30px;"></i></a>
+        &nbsp;&nbsp;
+        <a href="https://icons.getbootstrap.com/icons/youtube/" class="link"><i class="bi-youtube" style="font-size: 30px;"></i></a>
+      </div>
+      <br><br>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+  </body>
+</html>
